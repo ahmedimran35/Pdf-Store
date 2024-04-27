@@ -67,8 +67,12 @@ function Navbar() {
               {" "}
               {/*hideden means by deafault its hidden abd block means it will be visible */}{" "}
               {/* search box implementation from tailwind  and daisyui*/}
-              <label className="input input-bordered flex items-center gap-2 px-10">
-                <input type="text" className="grow" placeholder="Search" />
+              <label className=" flex items-center gap-2 px-3 py-1 border rounded-md">
+                <input
+                  type="text"
+                  className="grow outline-none"
+                  placeholder="Search"
+                />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
