@@ -1,29 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Navbar() {
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const Navitem = (
     /* parent container */
     <>
       <li>
-        <a>Home</a>
+        <a href="/">Home</a>
       </li>
       <li>
-        <a>Courses</a>
+        <a href="/courses">Courses</a>
       </li>
       <li>
         <a>Contact</a>
       </li>
       <li>
-        <a>About US</a>
+        <a>About </a>
       </li>
     </>
   );
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+      <div
+        className={` max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-base-200  duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
         {" "}
         {/* parent container divided into 2 parts wire 1st for logo and 2nd for menu and buttons */}
-        <div className="navbar bg-base-100">
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -100,7 +121,7 @@ function Navbar() {
 
                 {/* sun icon */}
                 <svg
-                  className="swap-off fill-current w-7 h-7 mr-8"
+                  className="swap-off fill-current w-7 h-7 mt-2"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -109,7 +130,7 @@ function Navbar() {
 
                 {/* moon icon */}
                 <svg
-                  className="swap-on fill-current w-7 h-7 mr-8"
+                  className="swap-on fill-current w-7 h-7 mt-2"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -118,7 +139,7 @@ function Navbar() {
               </label>
             </div>
             <div className="">
-              <a className="bg-black text-white px-3 py-1 rounded-md hover-bg-slate-800 duration-300 cursor-pointer ">
+              <a className="bg-red-500 text-white px-3 py-1 rounded-md hover-bg-slate-800 duration-300 cursor-pointer ">
                 Login
               </a>
             </div>
