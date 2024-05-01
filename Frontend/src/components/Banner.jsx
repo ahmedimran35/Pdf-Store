@@ -31,8 +31,8 @@ function Banner() {
               </label>
             </div>{" "}
             {/* email input */}
-            <button className="btn bg-red-500 text-white hover:bg-gray-600">
-              Secondary
+            <button className="btn bg-red-500 text-white hover:bg-green-600">
+              Subscribe
             </button>
           </div>
         </div>

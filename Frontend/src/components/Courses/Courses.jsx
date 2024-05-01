@@ -2,10 +2,8 @@ import React from "react";
 import Navbar from "../Navbar";
 import Course from "../Course";
 import Footer from "../Footer";
-import List from "../../../public/list.json";
 
 function Courses() {
-  console.log(List);
   return (
     <>
       <Navbar />

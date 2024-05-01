@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Mern stack Pdf-store backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedimran35/Pdf-Store.git"
+  },
+  "author": "Imran Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedimran35/Pdf-Store/issues"
+  },
+  "homepage": "https://github.com/ahmedimran35/Pdf-Store#readme"
+}
